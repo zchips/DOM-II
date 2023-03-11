@@ -34,6 +34,15 @@ window.onload = function (evt) {
         const {clientX, clientY} = evt
 
     })
-    
+    // how to manage the rate of capture to help performance
+    const destinations = document.querySelectorAll('.destination')
+    for( let destination of destinations){
+        destination.addEventListener('mouseenter', () => {
+            destination.style.fontWeight = 'bold'
+        })
+        destination.addEventListener('mouseleave', () => {
+            destination.style.fontWeight = 'initial'
+        })
+    }
 
 }
